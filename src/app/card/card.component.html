@@ -1,0 +1,24 @@
+<div class="container-card">
+    <div class="display-temperature">
+        {{ properties.main.temp | number:'2.1-1' }} ºC
+    </div>
+    <div class="display-infos">
+        <h5 class="city">{{ properties.name }}, {{ properties.sys.country }}
+            <img src="http://openweathermap.org/images/flags/{{flag}}.png" alt="" class="container-flag">
+        </h5>
+        <table class=detail>
+            <tr>
+               <td class="description">Máx</td> 
+                <td class="max">{{ properties.main.temp_max | number:'2.1-1' }} ºC</td>
+            </tr>
+            <tr>
+               <td class="description">Min</td> 
+                <td class="min">{{ properties.main.temp_min | number:'2.1-1' }} ºC</td>
+            </tr>
+        </table>
+    </div>
+    <div class="display-img">
+        <img src="https://openweathermap.org/img/w/{{ icon }}.png" alt="">
+        <span>{{ properties.weather[0].description }}</span>
+    </div>
+</div>

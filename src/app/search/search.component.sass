@@ -1,0 +1,76 @@
+.container-search
+    display: flex
+    width: 100vw
+    height: 300px
+    background-color: #39A3DB   
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    
+    
+.title-search
+    width: 221px
+    height: 24px
+    font:
+        size: 20px
+        weight: normal
+        stretch: normal
+        style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: center
+    color: #FFF
+    text-transform: uppercase
+
+.input-search
+    width: 460px
+    height: 48px
+    border-radius: 4px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2)
+    background-color: #FFF
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 16px
+    margin: 16px 0
+    & input
+        border: none
+        background: #FFF
+        outline: none
+        font-size: 16px
+    & i
+        font-size: 28px
+        color: #39A3DB
+        cursor: pointer
+
+::placeholder
+    color: #9C9C9C
+
+.container-list
+    position: absolute
+    top: 235px
+    width: 100vw
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.card
+    opacity: 0
+    animation: appearCard .65s cubic-bezier(.250, .460, .450, .940) forwards
+    cursor: pointer
+
+
+@for $i from 1 through 10
+    .card:nth-child(#{$i})
+        animation-delay: $i *.05s
+
+
+@keyframes appearCard
+    0%
+        transform: translateY(300px)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+        
+
