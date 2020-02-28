@@ -1,13 +1,18 @@
 <div class="container-search">
     <h3 class="title-search">Weather in your city</h3>
-    <div class="input-search">
+    <div class="input-search" id="input-search">
         <input 
             type="text" 
             placeholder="Your city name" 
             [value]="city"
-            (input)="city = $event.target.value"    
+            (input)="city = $event.target.value" 
+            (keypress)="keyPress($event)" 
+            (focus)="handleFocus()" 
         >
         <i class="ion ion-ios-search-strong" (click)="handleClick()"></i>
+    </div>
+    <div class="container-alert">
+        <span class="err" *ngIf="alert">City is empty</span>
     </div>
 </div>
 <div class="container-list" *ngIf="citys.length > 0"> 
