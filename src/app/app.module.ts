@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { Search } from './search/search.component';
 import { SearchService } from './search/search.service'
 import { Card } from './card/card.component';
+import { WeatherForecast } from './weather-forecast/weather-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Search,
-    Card
+    Card,
+    WeatherForecast
   ],
   imports: [
     BrowserModule,
