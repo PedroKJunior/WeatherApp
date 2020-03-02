@@ -1,1 +1,49 @@
-<p>weather-forecast works!</p>
+<Header></Header>
+<div class="body-weather">
+    <div class="title-weather">
+        <h1 class="title">Weather in São Paulo, BR</h1>
+        <span class="date">12:57 Aug 2</span>
+    </div>
+    <div class="base-weather">
+        <div class="geral-weather">
+            <div class="temperature">
+                <div>17ºC</div>
+                <img src="https://openweathermap.org/img/w/04d.png" alt="">
+                <span>overcast clouds</span>
+            </div>
+            <div class="data">
+                <table>
+                    <tr>
+                        <td class="description">Max</td>
+                        <td class="max">19.7ºC</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Min</td>
+                        <td class="min">13.3ºC</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Sunrise</td>
+                        <td class="hour">06:40</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Sunset</td>
+                        <td class="hour">17:45</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="weather-forecast">
+            <div class="forecast-title">
+                <h3>5 days weather forecast</h3>
+                <span>every 3 hours</span>
+            </div>
+            <div class="list-forecast">
+                <Card-day [clasStyle]="clasStyle"></Card-day>
+                <Card-day></Card-day>
+                <Card-day></Card-day>
+                <Card-day></Card-day>
+                <Card-day></Card-day>
+            </div>
+        </div>
+    </div>
+</div>

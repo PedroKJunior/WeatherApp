@@ -7,13 +7,17 @@ import { Search } from './search/search.component';
 import { SearchService } from './search/search.service'
 import { Card } from './card/card.component';
 import { WeatherForecast } from './weather-forecast/weather-forecast.component';
+import { HeaderComponent } from './weather-forecast/header/header.component';
+import { CardDay } from './weather-forecast/card-day/card-day.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Search,
     Card,
-    WeatherForecast
+    WeatherForecast,
+    HeaderComponent,
+    CardDay
   ],
   imports: [
     BrowserModule,

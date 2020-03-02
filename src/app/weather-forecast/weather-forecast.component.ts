@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'WeatherForecast',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather-forecast.component.sass']
 })
 export class WeatherForecast implements OnInit {
-
+  
+  @Input() clasStyle: string = 'active'
+  
   constructor() { }
 
   ngOnInit(): void {

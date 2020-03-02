@@ -1,0 +1,21 @@
+<div class="header">
+    <div class="icon">
+        <i class="ion ion-android-arrow-back" routerLink='/'></i>
+    </div>
+    <div class="input">
+        <div class="input-search" id="input-search">
+            <input 
+                type="text" 
+                placeholder="Your city name" 
+                [value]="city"
+                (input)="city = $event.target.value" 
+                (keypress)="keyPress($event)" 
+                (focus)="handleFocus()" 
+            >
+            <i class="ion ion-ios-search-strong" (click)="handleClick()"></i>
+        </div>
+        <div class="container-alert">
+            <span class="err" *ngIf="alert">City is empty</span>
+        </div>
+    </div>
+</div>
