@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core'
+import { WeatherForecastService } from './weather-forecast.service'
 
 @Component({
   selector: 'WeatherForecast',
@@ -7,12 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./weather-forecast.component.sass']
 })
 export class WeatherForecast implements OnInit {
-  
-  @Input() clasStyle: string = 'active'
-  
-  constructor() { }
+
+  weatherForecastService: WeatherForecastService
+    
+  constructor(_weatherForecastService: WeatherForecastService) { 
+    this.weatherForecastService = _weatherForecastService
+  }
 
   ngOnInit(): void {
+
+    console.log(this.weatherForecastService.getWeatherForecast(2643743))
   }
 
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { SearchService } from './search.service';
-import _ from "loadsh";
+import { Component, OnInit, Input } from '@angular/core'
+import { SearchService } from './search.service'
+import _ from "loadsh"
 
 @Component({
   selector: 'search',

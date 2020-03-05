@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardDay implements OnInit {
 
-  clasStyle: string
+  @Input() clasStyle: string = ''
 
   constructor() { }
 
